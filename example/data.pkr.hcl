@@ -16,12 +16,12 @@ data "external-json" "example" {
 
 data "external-raw" "example" {
   program = ["rev"]
-  query = "hello"
+  query   = "hello"
 }
 
 locals {
   json_result = data.external-json.example.result
-  raw_result = data.external-raw.example.result
+  raw_result  = data.external-raw.example.result
 }
 
 source "null" "example" {

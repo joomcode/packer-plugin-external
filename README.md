@@ -6,7 +6,7 @@ A plugin for [Packer](https://www.packer.io/) which provides access to external 
 ```hcl
 packer {
   required_plugins {
-    git = {
+    external = {
       version = ">= 0.0.1"
       source  = "github.com/joomcode/external"
     }
@@ -22,12 +22,12 @@ data "external-json" "example" {
 
 data "external-raw" "example" {
   program = ["rev"]
-  query = "hello"
+  query   = "hello"
 }
 
 locals {
   json_result = data.external-json.example.result["foo"] # "val1"
-  raw_result = data.external-raw.example.result # "olleh\n"
+  raw_result  = data.external-raw.example.result # "olleh\n"
 }
 ```
 
