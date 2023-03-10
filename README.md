@@ -7,13 +7,13 @@ A plugin for [Packer](https://www.packer.io/) which provides access to external 
 packer {
   required_plugins {
     external = {
-      version = ">= 0.0.1"
+      version = ">= 0.0.2"
       source  = "github.com/joomcode/external"
     }
   }
 }
 
-data "external-json" "example" {
+data "external" "example" {
   program = ["jq", "{ \"foo\": .key1 }"]
   query = {
     key1 = "val1"
@@ -26,8 +26,8 @@ data "external-raw" "example" {
 }
 
 locals {
-  json_result = data.external-json.example.result["foo"] # "val1"
-  raw_result  = data.external-raw.example.result # "olleh\n"
+  external_result = data.external.example.result["foo"] # "val1"
+  raw_result      = data.external-raw.example.result # "olleh\n"
 }
 ```
 

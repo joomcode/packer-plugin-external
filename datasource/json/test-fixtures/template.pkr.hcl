@@ -1,4 +1,4 @@
-data "external-json" "test" {
+data "external" "test" {
   program = ["jq", "-r", "{\"my_key1\": \"my_\\(.key1)\"}"]
   query = {
     key1 = "val1"
@@ -6,7 +6,7 @@ data "external-json" "test" {
 }
 
 locals {
-  result = data.external-json.test.result
+  result = data.external.test.result
 }
 
 source "null" "test" {

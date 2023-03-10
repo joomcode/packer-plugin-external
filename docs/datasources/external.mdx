@@ -2,15 +2,15 @@
 description: >
   The json data source is used to communicate with external commands
   using JSON protocol.
-page_title: JSON - Data Sources
-nav_title: JSON
+page_title: External - Data Sources
+nav_title: External
 ---
 
-# External JSON
+# External
 
-Type: `external-json`
+Type: `external`
 
-The `json` data source allows an external program implementing a specific
+The `external` data source allows an external program implementing a specific
 protocol (defined below) to act as a data source, exposing arbitrary
 data for use elsewhere in the Packer configuration.
 
@@ -24,7 +24,7 @@ be used differently) on different operating systems.
 
 ### Example Usage
 ```hcl
-data "external-json" "example" {
+data "external" "example" {
   program = ["jq", "{ \"foo\": .key1 }"]
   query = {
     key1 = "val1"
@@ -32,7 +32,7 @@ data "external-json" "example" {
 }
 
 locals {
-  result = data.external-json.example.result
+  result = data.external.example.result
 }
 
 source "null" "example" {

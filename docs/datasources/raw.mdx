@@ -2,15 +2,15 @@
 description: >
   The raw data source is used to communicate with external commands
   using plaintext protocol.
-page_title: Raw - Data Sources
-nav_title: Raw
+page_title: External Raw - Data Sources
+nav_title: External Raw
 ---
 
 # External Raw
 
 Type: `external-raw`
 
-The `raw` data source allows an external program to act as a data source,
+The `external-raw` data source allows an external program to act as a data source,
 exposing arbitrary data for use elsewhere in the Packer configuration.
 
 ~> **Warning** This mechanism is provided as an "escape hatch" for exceptional
@@ -49,11 +49,14 @@ build {
 
 ## External Program Protocol
 
-The protocol is almost the same as the one used by the 
-[json](/packer/plugins/datasources/external/json) data source.
-However, query and result are plaintext strings instead
-of JSON objects. Please refer to the [json](/packer/plugins/datasources/external/json)
+The protocol is similar to the one used by the
+[external](/packer/plugins/datasources/external/external) data source.
+However, query and result are plaintext strings instead of JSON objects.
+Refer to the [external](/packer/plugins/datasources/external/external) doc
 for more details.
+
+`external-raw` should be used over `external` in cases where the external program
+does not support JSON input and/or output.
 
 ## Argument Reference
 

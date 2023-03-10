@@ -15,7 +15,7 @@ import (
 //go:embed test-fixtures/template.pkr.hcl
 var testDatasourceHCL2Basic string
 
-func TestAccExternalDatasource(t *testing.T) {
+func TestAccExternalRawDatasource(t *testing.T) {
 	testCase := &acctest.PluginTestCase{
 		Name: "external_datasource_basic_test",
 		Setup: func() error {

@@ -72,7 +72,7 @@ func (d *Datasource) Execute() (cty.Value, error) {
 			stderr = string(eerr.Stderr)
 		}
 		log.Printf("command failed, err=%v, stdout='%q', stderr='%q'", err, string(resultRaw), stderr)
-		return cty.Value{}, fmt.Errorf("external program run failed: %v", err)
+		return cty.Value{}, fmt.Errorf("external program run failed: %v, stderr='%q'", err, stderr)
 	}
 	log.Println("command result:", string(resultRaw))
 

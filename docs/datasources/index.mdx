@@ -10,9 +10,9 @@ sidebar_title: Overview
 The External plugin is able to communicate with external commands.
 The following data sources are currently supported:
 
-- [json](/packer/plugins/datasources/external/json) - Communicate with external commands
+- [external](/packer/plugins/datasources/external/external) - Communicate with external commands
   using JSON protocol.
-- [raw](/packer/plugins/datasources/external/raw) - Communicate with external commands
+- [external-raw](/packer/plugins/datasources/external/raw) - Communicate with external commands
   using plaintext protocol.
 
 ## Installation
@@ -32,7 +32,7 @@ Then, run [`packer init`](https://www.packer.io/docs/commands/init).
 packer {
   required_plugins {
     external = {
-      version = ">= 0.0.1"
+      version = ">= 0.0.2"
       source  = "github.com/joomcode/external"
     }
   }

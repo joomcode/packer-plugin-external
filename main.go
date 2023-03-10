@@ -13,7 +13,7 @@ import (
 
 func main() {
 	pps := plugin.NewSet()
-	pps.RegisterDatasource("json", new(json.Datasource))
+	pps.RegisterDatasource(plugin.DEFAULT_NAME, new(json.Datasource))
 	pps.RegisterDatasource("raw", new(raw.Datasource))
 	pps.SetVersion(version.PluginVersion)
 	err := pps.Run()

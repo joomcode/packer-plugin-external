@@ -15,7 +15,7 @@ import (
 //go:embed test-fixtures/template.pkr.hcl
 var testDatasourceHCL2Basic string
 
-func TestAccExternalDatasource(t *testing.T) {
+func TestAccExternalJsonDatasource(t *testing.T) {
 	testCase := &acctest.PluginTestCase{
 		Name: "external_datasource_basic_test",
 		Setup: func() error {
@@ -25,7 +25,7 @@ func TestAccExternalDatasource(t *testing.T) {
 			return nil
 		},
 		Template: testDatasourceHCL2Basic,
-		Type:     "external-json",
+		Type:     "external",
 		Check: func(buildCommand *exec.Cmd, logfile string) error {
 			if buildCommand.ProcessState != nil {
 				if buildCommand.ProcessState.ExitCode() != 0 {
