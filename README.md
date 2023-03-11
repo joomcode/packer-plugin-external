@@ -43,5 +43,4 @@ This will run the acceptance tests for all plugins in this set.
 
 # Requirements
 
--	[packer-plugin-sdk](https://github.com/hashicorp/packer-plugin-sdk) >= v0.2.9
--	[Go](https://golang.org/doc/install) >= 1.17
+-	[Go](https://go.dev/doc/install) >= 1.17
