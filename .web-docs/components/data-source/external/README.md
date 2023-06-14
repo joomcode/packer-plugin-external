@@ -1,13 +1,3 @@
----
-description: >
-  The json data source is used to communicate with external commands
-  using JSON protocol.
-page_title: External - Data Sources
-nav_title: External
----
-
-# External
-
 Type: `external`
 
 The `external` data source allows an external program implementing a specific
