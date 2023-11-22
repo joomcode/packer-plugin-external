@@ -3,7 +3,7 @@
 integration {
   name = "External"
   description = "TODO"
-  identifier = "packer/BrandonRomano/external"
+  identifier = "packer/joomcode/external"
   component {
     type = "data-source"
     name = "External Raw"

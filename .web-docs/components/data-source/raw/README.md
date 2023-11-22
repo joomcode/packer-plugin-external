@@ -40,9 +40,9 @@ build {
 ## External Program Protocol
 
 The protocol is similar to the one used by the
-[external](/packer/integrations/BrandonRomano/external/latest/components/data-source/external) data source.
+[external](/packer/integrations/joomcode/external/latest/components/data-source/external) data source.
 However, query and result are plaintext strings instead of JSON objects.
-Refer to the [external](/packer/integrations/BrandonRomano/external/latest/components/data-source/external) doc
+Refer to the [external](/packer/integrations/joomcode/external/latest/components/data-source/external) doc
 for more details.
 
 `external-raw` should be used over `external` in cases where the external program
