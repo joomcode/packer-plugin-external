@@ -2,7 +2,7 @@
 # https://github.com/hashicorp/integration-template#metadata-configuration
 integration {
   name = "External"
-  description = "TODO"
+  description = "The External plugin is able to communicate with external commands."
   identifier = "packer/joomcode/external"
   component {
     type = "data-source"
