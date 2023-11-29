@@ -24,8 +24,8 @@ $ packer plugins install github.com/joomcode/external
 ### Components
 
 #### Data Sources
-- [external](/packer/integrations/joomcode/latest/components/data-source/external) - Communicate with external commands
+- [external](/packer/integrations/joomcode/external/latest/components/data-source/external) - Communicate with external commands
   using JSON protocol.
-- [external-raw](/packer/integrations/joomcode/latest/components/data-source/raw) - Communicate with external commands
+- [external-raw](/packer/integrations/joomcode/external/latest/components/data-source/raw) - Communicate with external commands
   using plaintext protocol.
 
