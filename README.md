@@ -43,4 +43,4 @@ This will run the acceptance tests for all plugins in this set.
 
 # Requirements
 
--	[Go](https://go.dev/doc/install) >= 1.17
+-	[Go](https://go.dev/doc/install) >= 1.22
