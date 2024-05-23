@@ -7,7 +7,7 @@ To install this plugin, copy and paste this code into your Packer configuration,
 ```hcl
 packer {
   required_plugins {
-    veertu-anka = {
+    external = {
       version = "> 0.0.2"
       source  = "github.com/joomcode/external"
     }
